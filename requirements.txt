@@ -11,8 +11,6 @@ httpx==0.13.3
 hyperframe==5.2.0
 hyperlink==21.0.0
 idna==2.10
-Twisted==21.2.0
-twisted-iocpsupport==1.0.1
 virtualenv==20.4.3
 websockets==9.0.1
 Werkzeug==1.0.1
