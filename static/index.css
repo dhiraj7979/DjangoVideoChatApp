@@ -1,0 +1,19 @@
+.my-container-class {
+    margin-top : 120px;
+    min-height : 45vh;
+}
+
+.my-footer-class {
+    margin-top : 100px;
+    min-height : 5vh;
+}
+
+.my-link-1 {
+    text-decoration: none;
+    color: white;
+}
+
+.my-link-1:hover {
+    text-decoration: none;
+    color : white;
+}

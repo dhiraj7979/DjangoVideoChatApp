@@ -1,0 +1,111 @@
+body {
+    background: #eee;
+}
+
+video {
+    background: black;
+    border: 1px solid gray;
+}
+
+.call-page {
+    position: relative;
+    display: block;
+    /* margin: 0 auto; */
+    /* flex-basis: 500px;*/
+    width: 50%;
+    /* height: 500px; */
+    /* overflow: scroll; */
+}
+
+#localVideo {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#remoteVideo {
+    width: 100%;
+    height: auto;
+}
+
+#callToUsernameInput {
+    max-width: 100%;
+}
+
+#msgDisplayer {
+    min-height: 100px;
+    padding: 2px;
+    width: 100%;
+}
+
+#msgSender {
+    margin-top: 2px;
+}
+
+#chatText {
+    display: inline-block;
+    width: 69%;
+}
+
+#chatSendBtn {
+    display: inline-block;
+    width: 29%;
+}
+
+#chatSection {
+    display: block;
+    width: 50%;
+}
+
+.myContainer1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    height: auto;
+    width: 100%;
+}
+
+.msgContainer {
+    height: 55vh;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width : 950px)  {
+    .myContainer1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call-page {
+        width: 100%;
+    }
+
+    #chatSection {
+        width: 100%;
+    }
+
+    #remoteVideo {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width : 450px) {
+    .myContainer1 {
+        height: auto;
+    }
+
+    .call-page {
+        height: auto;
+    }
+
+    .videoContainer {
+        width: 100%;
+        height: 55vh;
+    }
+}

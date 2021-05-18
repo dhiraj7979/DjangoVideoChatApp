@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous">
+
+        <title>Chat Page</title>
+
+        {% load static %}
+        <!-- <script src="{% static 'connection.js' %}"></script> -->
+</head>
+
+<body>
+
+        <p class="container">Welcome to chat page...</p>
+        <button id="ws-close-btn" class="btn btn-danger mb-3">Close Connection</button>
+
+
+        <div class="row w-100">
+
+                <div class="col">
+                        <video autoplay></video>
+                        <!--    <script src="{% static '/js/connection.js' %}"></script>-->
+                </div>
+
+                <div class="col bg-primary">
+                        <div id="msg-container" class="col align-self-start">
+                                <h3 class="my-align-left">Hi</h3>
+                                <h3 class="my-align-right">Hello</h3>
+                                <h3 class="my-align-left">How are you?</h3>
+                                <h3 class="my-align-right">I am fine</h3>
+                        </div>
+
+                        <!-- <div class="input-group flex-wrap align-self-end">
+                                <input type="text" class="form-control" placeholder="Message" aria-label="Message"
+                                        aria-describedby="addon-wrapping">
+                        </div> -->
+                        <div class="col">
+                                <div class="col">
+                                        <input type="text" class="form-control" id="user_msg" placeholder="Message...">
+                                </div>
+                                <div class="col">
+                                        <button id="send_msg_btn" class="btn btn-success mb-3">Send</button>
+                                </div>
+                        </div>
+                </div>
+
+        </div>
+
+
+
+        <!-- <div class="fluid-container">
+                <h1 class="text-primary" id="integers-displayer"></h1>
+        </div> -->
+
+
+
+
+        <script src="{% static 'connection.js' %}"></script>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script crossorigin="anonymous"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+                </script>
+        <script crossorigin="anonymous"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+                </script>
+        <script crossorigin="anonymous"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+                </script>
+</body>
+
+</html>
+</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
