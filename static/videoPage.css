@@ -1,5 +1,5 @@
 body {
-    background: #eee;
+    background: #fff;
 }
 
 video {
@@ -72,6 +72,10 @@ video {
 .msgContainer {
     height: 55vh;
     overflow-y: scroll;
+}
+
+.myPadding {
+    padding: 0.25rem;
 }
 
 @media screen and (max-width : 950px)  {
