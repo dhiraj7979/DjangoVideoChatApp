@@ -189,40 +189,6 @@ function handleLogin(success) {
             alert("WebRTC is not supported");
         }
 
-        //getting local video stream.
-        // navigator.webkitGetUserMedia({video: true, audio: true }, (myStream)=> {
-        //     stream = myStream;
-
-        //     // displaying local video stream on the page.
-        //     localVideo.srcObject = stream;
-
-        //     // using Google public stun server.
-        //     var configuration = {
-        //         "iceServers": [{ "url": "stun:stun2.1.google.com:19302" }]
-        //     };
-
-        //     yourConn = new webkitRTCPeerConnection(configuration);
-
-        //     // setup stream listening.
-        //     yourConn.addStream(stream);
-
-        //     // when a remote user adds stream to the peer connection, we display it
-        //     yourConn.onaddstream = (e)=> {
-        //         remoteVideo.srcObject = e.stream;
-        //     };
-
-        //     // Setup ice handling.
-        //     yourConn.onicecandidate = (event)=> {
-        //         if(event.candidate) {
-        //             send({
-        //                 type: "candidate",
-        //                 candidate: event.candidate
-        //             });
-        //         }
-        //     };
-        // }, (error)=> {
-        //     console.log("error ", error);
-        // });
     }
 };
 
@@ -333,13 +299,6 @@ chatSendBtn.addEventListener('click', () => {
         cardBody.classList.add("card-body", "myPadding");
         cardTitle.classList.add("card-title");
         cardText.classList.add("card-text");
-
-        // var tag = document.createElement('p');
-        // tag.style.backgroundColor = "red";
-        // var m = "" + name + ">> " + chatText.value;
-        // var text = document.createTextNode(m);
-        // tag.appendChild(text);
-        // msgDisplayer.appendChild(tag);
 
         // reset text input
         chatText.value = "";
