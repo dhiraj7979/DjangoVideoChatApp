@@ -313,39 +313,75 @@ chatSendBtn.addEventListener('click', () => {
         });
 
         var msgDisplayer = chatSection.querySelector('#msgDisplayer');
-        var tag = document.createElement('p');
-        tag.style.backgroundColor = "red";
-        var m = "" + name + ">> " + chatText.value;
-        var text = document.createTextNode(m);
-        tag.appendChild(text);
-        msgDisplayer.appendChild(tag);
+        var card = document.createElement('div');
+        var cardBody = document.createElement('div');
+        var cardTitle = document.createElement('h5');
+        var cardText = document.createElement('p');
+
+
+        var TitleText = document.createTextNode("" + name);
+        var TextText = document.createTextNode("" + chatText.value);
+
+        cardTitle.appendChild(TitleText);
+        cardText.appendChild(TextText);
+        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(cardText);
+        card.appendChild(cardBody);
+        msgDisplayer.appendChild(card);
+
+        card.classList.add("card", "bg-warning", "text-dark", "float-right", "mb-1", "w-75", "d-block");
+        cardBody.classList.add("card-body", "myPadding");
+        cardTitle.classList.add("card-title");
+        cardText.classList.add("card-text");
+
+        // var tag = document.createElement('p');
+        // tag.style.backgroundColor = "red";
+        // var m = "" + name + ">> " + chatText.value;
+        // var text = document.createTextNode(m);
+        // tag.appendChild(text);
+        // msgDisplayer.appendChild(tag);
 
         // reset text input
         chatText.value = "";
+        document.querySelector('#chatText').focus();
+        msgDisplayer.scrollTop = msgDisplayer.scrollHeight;
     }
 
 
 });
 
-// To display newly sent chat messages
+// To display newly recieved chat messages
 function handleChat(username, chatContent) {
     var msgDisplayer = chatSection.querySelector('#msgDisplayer');
+    var card = document.createElement('div');
+    var cardBody = document.createElement('div');
+    var cardTitle = document.createElement('h5');
+    var cardText = document.createElement('p');
 
-    var tag = document.createElement('p');
-    tag.style.backgroundColor = "green";
-    var m = "" + username + ">> " + chatContent;
-    var text = document.createTextNode(m);
-    tag.appendChild(text);
-    msgDisplayer.appendChild(tag);
+    var TitleText = document.createTextNode("" + username);
+    var TextText = document.createTextNode("" + chatContent);
+
+    cardTitle.appendChild(TitleText);
+    cardText.appendChild(TextText);
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(cardText);
+    card.appendChild(cardBody);
+    msgDisplayer.appendChild(card);
+
+    card.classList.add("card", "bg-info", "text-light", "float-left", "mb-1", "w-75", "d-block");
+    cardBody.classList.add("card-body", "myPadding");
+    cardTitle.classList.add("card-title");
+    cardText.classList.add("card-text");
+
+    msgDisplayer.scrollTop = msgDisplayer.scrollHeight;
 }
 
 
-
-
-// var data = event.data;
-//     console.log(data);
-//     var tag = document.createElement('h3');
-//     var text = document.createTextNode(data);
-//     tag.appendChild(text);
-//     var element = document.querySelector('#msg-container');
-//     element.appendChild(tag);
+// While focus on TextBox and Enter key is presses, send button is auto clicked.
+document.querySelector("#chatText")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.querySelector("#chatSendBtn").click();
+    }
+});
