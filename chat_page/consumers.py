@@ -135,13 +135,5 @@ class WSConsumer(WebsocketConsumer):
 
 
         
-        # if text_data is not None:
-        #     print(f"Message from client>> {text_data}");
-        #     msglist.append(text_data)
-        #     self.send(text_data=text_data)
-        # else:
-        #     print(f"No data sent...")
-        
-        # self.disconnect(1005)
 
 

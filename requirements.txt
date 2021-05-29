@@ -56,6 +56,7 @@ SQLAlchemy==1.4.7
 sqlparse==0.4.1
 tqdm==4.60.0
 Twisted==21.2.0
+twisted-iocpsupport==1.0.1
 txaio==21.2.1
 virtualenv==20.4.3
 websockets==9.0.1
